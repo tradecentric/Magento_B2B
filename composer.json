@@ -12,7 +12,8 @@
     "version": "3.0.0",
     "require": {
         "php": "~7.4.0||^8.0",
-        "magento/extension-b2b": "*"
+        "magento/extension-b2b": "*",
+        "tradecentric/module-punchout": "*"
     },
     "suggest": {
 
