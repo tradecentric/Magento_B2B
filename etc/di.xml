@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <virtualType name="customerExtractorPool">
+        <arguments>
+            <argument name="extractorPool" xsi:type="array">
+                <item name="company" xsi:type="object">TradeCentric\PunchoutB2b\Model\PunchoutSessionCollector\CustomerHandler\DataExtractors\CompanyParams</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

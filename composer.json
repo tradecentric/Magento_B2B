@@ -1,0 +1,29 @@
+{
+    "name": "tradecentric/module-punchout",
+    "description": "N/A",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "version": "3.0.0",
+    "require": {
+        "php": "~7.4.0||^8.0",
+        "magento/extension-b2b": "*"
+    },
+    "suggest": {
+
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "TradeCentric\\PunchoutB2b\\": ""
+        }
+    }
+}
+
