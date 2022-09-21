@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="punchout2go_punchout_b2b" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Punchout B2B</label>
+            <tab>punchout2go</tab>
+            <resource>TradeCentric_PunchoutB2b::config_purchaseorder</resource>
+            <group id="system" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>System</label>
+                <field id="version" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Current Version</label>
+                    <frontend_model>TradeCentric\PunchoutB2b\Block\Forms\Config\Version</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

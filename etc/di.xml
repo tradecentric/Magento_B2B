@@ -9,4 +9,13 @@
             </argument>
         </arguments>
     </virtualType>
+
+    <virtualType name="TradeCentric\PunchoutB2b\Block\Forms\Config\Version" type="TradeCentric\Version\Block\Forms\Config\Version">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="module_name" xsi:type="string">TradeCentric_PunchoutB2b</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
 </config>
