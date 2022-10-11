@@ -9,12 +9,12 @@
     "config": {
         "sort-packages": true
     },
-    "version": "3.0.0",
+    "version": "3.0.1",
     "require": {
         "php": "~7.4.0||^8.0",
         "magento/extension-b2b": "*",
         "tradecentric/module-punchout": "*",
-        "tradecentric/module-version": "*"
+        "tradecentric/module-version": "~3.0.1"
     },
     "suggest": {
 

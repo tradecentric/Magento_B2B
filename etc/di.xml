@@ -12,10 +12,22 @@
 
     <virtualType name="TradeCentric\PunchoutB2b\Block\Forms\Config\Version" type="TradeCentric\Version\Block\Forms\Config\Version">
         <arguments>
-            <argument name="data" xsi:type="array">
-                <item name="module_name" xsi:type="string">TradeCentric_PunchoutB2b</item>
-            </argument>
+            <argument name="helper" xsi:type="object">TradeCentric\PunchoutB2b\Helper\Module</argument>
         </arguments>
     </virtualType>
+
+    <type name="TradeCentric\PunchoutB2b\Model\Transfer\QuoteDataHandlers\Version">
+        <arguments>
+            <argument name="helper" xsi:type="object">TradeCentric\PunchoutB2b\Helper\Module</argument>
+        </arguments>
+    </type>
+
+    <type name="Punchout2Go\Punchout\Model\Transfer\QuoteDataPool">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="b2b_version" xsi:type="object">TradeCentric\PunchoutB2b\Model\Transfer\QuoteDataHandlers\Version</item>
+            </argument>
+        </arguments>
+    </type>
 
 </config>
