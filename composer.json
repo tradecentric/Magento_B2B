@@ -1,6 +1,6 @@
 {
     "name": "tradecentric/module-punchout-b2b",
-    "description": "N/A",
+    "description": "TradeCentric B2B",
     "type": "magento2-module",
     "license": [
         "OSL-3.0",
@@ -14,7 +14,7 @@
         "php": "~7.4.0||^8.0",
         "magento/extension-b2b": "*",
         "tradecentric/module-punchout": "*",
-        "tradecentric/module-version": "3.0.1"
+        "tradecentric/module-version": "^3.0"
     },
     "suggest": {
 
