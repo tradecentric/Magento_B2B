@@ -1,7 +1,7 @@
 TradeCentric - PunchOut-B2B
 ===========
 ### 3.0.2 (2025-02-26)
-* Added ACL support for Role management
+* PBR-2329 Added ACL support for Role management
 
 ### 3.0.1 (2022-11-021)
 * Added sending extension version back to TradeCentric with the payload json
