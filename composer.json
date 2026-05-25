@@ -9,18 +9,23 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "magento/composer-dependency-version-audit-plugin": false,
+            "magento/magento-composer-installer": false
         }
     },
     "version": "3.0.2",
+    "repositories": {
+        "magento": {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    },
     "require": {
         "php": "^7.4.0||^8.0",
         "magento/extension-b2b": "*",
         "tradecentric/module-punchout": "*",
         "tradecentric/module-version": "*"
-    },
-    "replace": {
-        "magento/extension-b2b": "*"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
