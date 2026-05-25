@@ -42,11 +42,10 @@ jobs:
           key: ${{ runner.os }}-php-${{ matrix.php-version }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: ${{ runner.os }}-php-${{ matrix.php-version }}-composer-
 
-      - name: Configure Magento repository credentials
-        run: composer config http-basic.repo.magento.com "${{ secrets.MAGENTO_REPO_USERNAME }}" "${{ secrets.MAGENTO_REPO_PASSWORD }}"
-
       - name: Install dependencies
         run: composer update --no-interaction --prefer-dist --no-progress
+        env:
+          COMPOSER_AUTH: '{"http-basic": {"repo.magento.com": {"username": "${{ secrets.MAGENTO_REPO_USERNAME }}", "password": "${{ secrets.MAGENTO_REPO_PASSWORD }}"}}}'
 
       - name: Run PHPCS
         run: composer cs
