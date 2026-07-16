@@ -14,7 +14,7 @@
             "magento/magento-composer-installer": false
         }
     },
-    "version": "3.0.2",
+    "version": "3.0.3",
     "repositories": {
         "magento": {
             "type": "composer",
