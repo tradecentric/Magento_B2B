@@ -9,7 +9,20 @@
 # - Security updates bypass both the schedule and the cooldown windows below,
 #   but must be enabled by a GitHub org admin (Settings > Advanced Security)
 #   before they'll open automatically — see CN-1374 for tracking.
+# - This repo requires magento/extension-b2b from Adobe's private
+#   repo.magento.com registry. Dependabot has its own secrets store,
+#   separate from Actions secrets, so MAGENTO_REPO_USERNAME/PASSWORD must
+#   also be added under Settings > Secrets and variables > Dependabot
+#   (mirroring the existing Actions secrets of the same name) before this
+#   registry entry can authenticate — see CN-1374.
 version: 2
+registries:
+  magento-repo:
+    type: composer-repository
+    url: https://repo.magento.com
+    username: ${{secrets.MAGENTO_REPO_USERNAME}}
+    password: ${{secrets.MAGENTO_REPO_PASSWORD}}
+
 updates:
   # GitHub Actions used in our CI workflows (phpcs, version-check, dora-release, etc.)
   - package-ecosystem: "github-actions"
@@ -29,6 +42,8 @@ updates:
   # PHP dependencies (module's own composer.json)
   - package-ecosystem: "composer"
     directory: "/"
+    registries:
+      - magento-repo
     schedule:
       interval: "monthly"
     cooldown:
